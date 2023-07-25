@@ -14,7 +14,8 @@ abstract class AbstractRedisRawClient implements RedisRawClientInterface
     public const REDIS_CLIENT_LIBRARY = 'RedisClient';
 
     public $redis;
-    protected LoggerInterface $logger;
+    /** @var LoggerInterface */
+    protected $logger;
 
     public function connect($hostname = '127.0.0.1', $port = 6379, $db = 0, $password = null): RedisRawClientInterface
     {
